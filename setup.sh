@@ -5,7 +5,7 @@ git clone https://github.com/everbot/dotfiles.git
 git clone https://github.com/everbot/.vim.git
 
 cd dotfiles
-bash $BASEDIR/dotfiles/install.sh
+bash install.sh
 
 cd ..
 rm -r ~/.vim
