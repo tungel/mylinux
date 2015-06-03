@@ -12,7 +12,7 @@ if [ $# -gt 0 ]; then
             shift
             ;;
         *)
-            echo "Option doesn't exsit! Bye!"
+            echo "Option doesn't exist! Bye!"
             exit 1
             ;;
     esac
