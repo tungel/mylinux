@@ -31,3 +31,7 @@ rm -r ~/.vim
 rm  ~/.vim
 ln -s $BASEDIR/.vim ~/.vim
 
+# make vimproc
+cd ~/.vim/bundle/vimproc.vim
+make
+
