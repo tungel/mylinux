@@ -11,6 +11,10 @@ if [ $# -gt 0 ]; then
             git clone git@github.com:everbot/.vim.git
             shift
             ;;
+        *)
+            echo "Option doesn't exsit! Bye!"
+            exit 1
+            ;;
     esac
 else
     echo "use http"
