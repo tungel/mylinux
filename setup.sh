@@ -1,8 +1,23 @@
 # https://github.com/everbot/mylinux
 
 BASEDIR=$(pwd)
-git clone https://github.com/everbot/dotfiles.git
-git clone https://github.com/everbot/.vim.git
+
+if [ $# -gt 0 ]; then
+    option=$1
+    case $option in
+        --ssh)
+            echo "use ssh"
+            git clone git@github.com:everbot/dotfiles.git
+            git clone git@github.com:everbot/.vim.git
+            shift
+            ;;
+    esac
+else
+    echo "use http"
+    git clone https://github.com/everbot/dotfiles.git
+    git clone https://github.com/everbot/.vim.git
+fi
+
 
 cd dotfiles
 bash install.sh
