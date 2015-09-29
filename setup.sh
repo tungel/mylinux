@@ -1,4 +1,5 @@
 # https://github.com/everbot/mylinux
+# TODO: convert to Ruby
 
 BASEDIR=$(pwd)
 
@@ -26,6 +27,7 @@ fi
 cd dotfiles
 bash install.sh
 
+# TODO: ask user before removing and symlink this
 cd ..
 rm -r ~/.vim
 rm  ~/.vim
