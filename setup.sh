@@ -25,13 +25,16 @@ fi
 
 
 cd dotfiles
-bash install.sh
+bash ./install.rb
 
 # TODO: ask user before removing and symlink this
 cd ..
 rm -r ~/.vim
 rm  ~/.vim
 ln -s $BASEDIR/.vim ~/.vim
+
+# symlink vimrc -> nvimrc
+ln -s ~/.nvimrc ~/.vimrc
 
 # make vimproc
 cd ~/.vim/bundle/vimproc.vim
