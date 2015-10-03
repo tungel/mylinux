@@ -25,7 +25,7 @@ fi
 
 
 cd dotfiles
-bash ./install.rb
+./install.rb
 
 # TODO: ask user before removing and symlink this
 cd ..
