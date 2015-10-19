@@ -25,7 +25,7 @@ fi
 
 
 cd dotfiles
-./install.rb
+./install.rb all=overwrite
 
 # TODO: ask user before removing and symlink this
 cd ..
