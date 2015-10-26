@@ -1,5 +1,8 @@
 # https://github.com/everbot/mylinux
-# TODO: convert to Ruby
+# TODO:
+# - convert to Ruby
+# - handle when `dotfiles` and `~/.vim` already exist
+
 
 BASEDIR=$(pwd)
 
@@ -29,12 +32,17 @@ cd dotfiles
 
 # TODO: ask user before removing and symlink this
 cd ..
-rm -r ~/.vim
+rm -rf ~/.vim
 rm  ~/.vim
 ln -s $BASEDIR/.vim ~/.vim
 
-# symlink vimrc -> nvimrc
-ln -s ~/.nvimrc ~/.vimrc
+# For neovim
+mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
+rm -rf $XDG_CONFIG_HOME/nvim
+rm $XDG_CONFIG_HOME/nvim
+ln -s ~/.vim $XDG_CONFIG_HOME/nvim
+rm -rf $XDG_CONFIG_HOME/nvim/init.vim
+ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
 
 # make vimproc
 cd ~/.vim/bundle/vimproc.vim
