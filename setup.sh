@@ -1,4 +1,4 @@
-# https://github.com/everbot/mylinux
+# https://github.com/tungel/mylinux
 # TODO:
 # - convert to Ruby
 # - handle when `dotfiles` and `~/.vim` already exist
