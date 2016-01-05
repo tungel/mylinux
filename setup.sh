@@ -22,8 +22,8 @@ if [ $# -gt 0 ]; then
     esac
 else
     echo "use http"
-    git clone https://github.com/everbot/dotfiles.git
-    git clone https://github.com/everbot/.vim.git
+    git clone https://github.com/tungel/dotfiles.git
+    git clone https://github.com/tungel/.vim.git
 fi
 
 
